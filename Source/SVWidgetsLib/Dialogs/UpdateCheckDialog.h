@@ -42,11 +42,9 @@
 #include <QtWidgets/QDialog>
 
 #include "SVWidgetsLib/QtSupport/QtSSettings.h"
-
-
 #include "SVWidgetsLib/SVWidgetsLib.h"
 #include "SVWidgetsLib/Dialogs/UpdateCheck.h"
-
+#include "SVWidgetsLib/Widgets/SVControlWidgets.h"
 
 #include "ui_UpdateCheckDialog.h"
 
@@ -58,13 +56,13 @@ class UpdateCheckData;
 /**
  * @brief The UpdateCheckDialog class
  */
-class SVWidgetsLib_EXPORT UpdateCheckDialog : public QDialog, private Ui::UpdateCheckDialog
+class SVWidgetsLib_EXPORT UpdateCheckDialog : public SVDialog, private Ui::UpdateCheckDialog
 {
     Q_OBJECT
 
   public:
     UpdateCheckDialog(UpdateCheck::SIMPLVersionData_t versionData, QWidget* parent = nullptr);
-    virtual ~UpdateCheckDialog();
+    ~UpdateCheckDialog() override;
 
     enum UpdateType
     {

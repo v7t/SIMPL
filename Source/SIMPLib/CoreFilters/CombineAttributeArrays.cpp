@@ -36,7 +36,7 @@
 #include "CombineAttributeArrays.h"
 
 #include "SIMPLib/Common/Constants.h"
-#include "SIMPLib/Common/TemplateHelpers.hpp"
+#include "SIMPLib/Common/TemplateHelpers.h"
 #include "SIMPLib/FilterParameters/AbstractFilterParametersReader.h"
 #include "SIMPLib/FilterParameters/BooleanFilterParameter.h"
 #include "SIMPLib/FilterParameters/MultiDataArraySelectionFilterParameter.h"
@@ -52,9 +52,7 @@ template <typename DataType> class CombineAttributeArraysTemplatePrivate
 public:
   typedef DataArray<DataType> DataArrayType;
 
-  CombineAttributeArraysTemplatePrivate()
-  {
-  }
+  CombineAttributeArraysTemplatePrivate() = default;
 
   virtual ~CombineAttributeArraysTemplatePrivate() = default;
 

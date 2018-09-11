@@ -38,6 +38,7 @@
 #include <QtWidgets/QDialog>
 
 #include "SVWidgetsLib/SVWidgetsLib.h"
+#include "SVWidgetsLib/Widgets/SVControlWidgets.h"
 
 //-- UIC generated Header
 #include <ui_FavoritesChangedDialog.h>
@@ -45,14 +46,14 @@
 /**
  * @brief The FavoritesChangedDialog class
  */
-class SVWidgetsLib_EXPORT FavoritesChangedDialog : public QDialog, private Ui::FavoritesChangedDialog
+class SVWidgetsLib_EXPORT FavoritesChangedDialog : public SVDialog, private Ui::FavoritesChangedDialog
 {
     Q_OBJECT
 
   public:
 
     FavoritesChangedDialog(QWidget* parent = nullptr);
-    virtual ~FavoritesChangedDialog();
+    ~FavoritesChangedDialog() override;
 
   protected slots:
 

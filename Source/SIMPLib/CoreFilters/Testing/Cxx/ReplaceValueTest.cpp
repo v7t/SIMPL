@@ -37,8 +37,6 @@
 #include <QtCore/QFile>
 
 #include "SIMPLib/Common/SIMPLibSetGetMacros.h"
-#include "SIMPLib/Common/TemplateHelpers.hpp"
-
 #include "SIMPLib/DataArrays/DataArray.hpp"
 #include "SIMPLib/Filtering/FilterFactory.hpp"
 #include "SIMPLib/Filtering/FilterManager.h"
@@ -120,12 +118,8 @@
 class ReplaceValueTest
 {
 public:
-  ReplaceValueTest()
-  {
-  }
-  virtual ~ReplaceValueTest()
-  {
-  }
+  ReplaceValueTest() = default;
+  virtual ~ReplaceValueTest() = default;
 
   // -----------------------------------------------------------------------------
   //

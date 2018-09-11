@@ -36,8 +36,7 @@
 #include <QtCore/QCoreApplication>
 
 #include "SIMPLib/Common/Constants.h"
-#include "SIMPLib/Common/TemplateHelpers.hpp"
-
+#include "SIMPLib/Common/TemplateHelpers.h"
 #include "SIMPLib/Filtering/FilterFactory.hpp"
 #include "SIMPLib/Filtering/FilterManager.h"
 #include "SIMPLib/Filtering/FilterPipeline.h"
@@ -66,12 +65,8 @@
 class CombineAttributeArraysTest
 {
 public:
-  CombineAttributeArraysTest()
-  {
-  }
-  virtual ~CombineAttributeArraysTest()
-  {
-  }
+  CombineAttributeArraysTest() = default;
+  virtual ~CombineAttributeArraysTest() = default;
   SIMPL_TYPE_MACRO(CombineAttributeArraysTest)
 
   // -----------------------------------------------------------------------------

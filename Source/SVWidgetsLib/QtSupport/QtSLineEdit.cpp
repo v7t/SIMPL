@@ -104,7 +104,7 @@ class SearchLineEditPrivate : public QObject
 public:
   explicit SearchLineEditPrivate(QtSLineEdit* parent);
 
-  virtual bool eventFilter(QObject* obj, QEvent* event);
+  bool eventFilter(QObject* obj, QEvent* event) override;
 
   QtSLineEdit* m_LineEdit;
   QPixmap m_PixMaps[2];
@@ -173,7 +173,7 @@ bool SearchLineEditPrivate::eventFilter(QObject* obj, QEvent* event)
 //
 // -----------------------------------------------------------------------------
 QtSLineEdit::QtSLineEdit(QWidget* parent)
-: QLineEdit(parent)
+: SVLineEdit(parent)
 , d(new SearchLineEditPrivate(this))
 {
   setAttribute(Qt::WA_MacShowFocusRect, false);

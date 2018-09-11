@@ -36,7 +36,6 @@
 #include <QtCore/QCoreApplication>
 
 #include "SIMPLib/Common/Constants.h"
-#include "SIMPLib/Common/TemplateHelpers.hpp"
 #include "SIMPLib/FilterParameters/DynamicTableData.h"
 #include "SIMPLib/Filtering/FilterFactory.hpp"
 #include "SIMPLib/Filtering/FilterManager.h"
@@ -63,12 +62,10 @@ public:
   : Observer()
   {
   }
-  virtual ~DummyObserver()
-  {
-  }
+  ~DummyObserver() override = default;
   SIMPL_TYPE_MACRO(DummyObserver)
 
-  void processPipelineMessage(const PipelineMessage& pm)
+  void processPipelineMessage(const PipelineMessage& pm) override
   {
     // Don't do anything...this class only exists to stifle the messages being dumped to the console
   }
@@ -81,12 +78,8 @@ private:
 class ArrayCalculatorTest
 {
 public:
-  ArrayCalculatorTest()
-  {
-  }
-  virtual ~ArrayCalculatorTest()
-  {
-  }
+  ArrayCalculatorTest() = default;
+  virtual ~ArrayCalculatorTest() = default;
   SIMPL_TYPE_MACRO(ArrayCalculatorTest)
 
   // -----------------------------------------------------------------------------
